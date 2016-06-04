@@ -7,8 +7,20 @@
 // You can use a form that takes the value and puts it into the array and remakes the buttons on the page.
 // Display the rating of the image on the page (PG, G, etc...). This data is provided by the giphy api.
 
+$('#addMonster').on('click', function(){
+    var monsterName = $('#monster-input').val().trim();
+    var monsterButton = $('<button>');
+    monsterButton.addClass('monstersButtonClass');
+    monsterButton.attr('data-scare', monsterName);
+    monsterButton.text(monsterName);
+    $('#buttonsAppearHere').append(monsterButton);
 
-$('button').on('click', function(){
+    // add on click listener to the new button before appending to the page
+
+    return false;
+});
+
+$('button').on('click',  function(){
     $('.monsterButton').removeClass('active');
     $(this).addClass('active');
     var p = $(this).data('scare'); 
@@ -33,26 +45,26 @@ $('button').on('click', function(){
          }
     }); 
 
-// This function handles events where one button is clicked
-    $('#addMonster').on('click', function(){
-        var monsterName = $('#monster-input').val().trim();
-        console.log(monsterName);
-        var monsterArray = [];
 
-        //monster.push(monsterName);
-      function renderButtons(){ 
-        $('#addMonster').on('click', function(){
-        var monsterButton = $('<button>');
-           a.addClass('monstersButtonClass');
-           a.attr('data-scare');
-       $('#buttonsAppearHere').append(a);
+    // $('#buttonsAppearHere').on('click', function(){
+    //     var monsterName = $('#monster-input').val().trim();
+    //     console.log(monsterName);
+    //     //var monsterArray = [];
+
+    //     //monster.push(monsterName);
+    //   function renderButtons(){ 
+    //     $('#addMonster').on('click', function(){
+    //     var monsterButton = $('<button>');
+    //        a.addClass('monstersButtonClass');
+    //        a.attr('data-scare');
+    //    $('#buttonsAppearHere').append(a);
        
-       });
-     renderButtons();
-     }
+    //    });
+    //  renderButtons();
+    //  }
         
-        return false;
-    })
+    //     return false;
+    // })
 
      
         
