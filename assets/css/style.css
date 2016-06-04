@@ -1,0 +1,42 @@
+
+h1{
+color:#F5F5DC;	
+}
+body{
+	width:auto;
+	background-color: #001900;
+	font-family: courier new;
+	
+}
+label{
+	color:#F5F5DC;
+}
+
+.jumbotron{
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-bottom: 0px;
+}
+
+#picture{
+	width: 100%;
+	height: 35%;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 5%; 
+	margin-top: 5%;
+
+}
+
+
+
+
+.item{
+	;
+	/*color:#F5F5DC;*/
+	color:#001900;
+	margin-left: 5%
+	margin-top:5%;
+	margin-bottom: 5%;
+	float: left;	
+}

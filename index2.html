@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <title>B00! Too!</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+<!--<h1>BOO! TOO!</h1>-->
+<div class="container">
+     <img src="assets/images/RedVaultofHorror.jpg" id="picture">
+        <!--<div class="jumbotron"></div>-->
+    
+
+
+
+    <button data-scare="Dracula">Dracula</button>
+    <button data-scare="Frankenstein">Frankenstein</button>
+    <button data-scare="Creature from the Black Lagoon">Creature from the Black Lagoon</button>
+    <button data-scare="The Invisible Man">The Invisible Man</button>
+    <button data-scare="Godzilla">Godzilla</button>
+    
+
+    <!-- -->
+    <form id="monsterForm">
+        
+            <label for="monsterForm">Add Some Scary</label>
+            <input type="text" id="monster-input"><br>
+
+        <input id="addMonster" type="submit" value="Submit">
+        <!--<input id="reset" type="reset" value="Reset ">-->
+        <!--<button type="reset" class="btn btn-primary">Reset</button>-->
+    </form>
+    
+    
+        
+    
+        
+    </form>
+    <!-- -->
+    <div id="gifsAppearHere"> 
+    </div>
+</div>
+<script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
+<script type="text/javascript" src='assets/javascript/app.js'>
+// $('button').on('click', function(){
+//     $('.monsterButton').removeClass('active');
+//     $(this).addClass('active');
+//     var p = $(this).data('scare'); // <------------------------- 1. What is this in "this" case? 
+//     var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + p + "&api_key=dc6zaTOxFJmzC&limit=10";
+//     $.ajax({url: queryURL, method: 'GET'})
+//      .done(function(response) {
+//          var results = response.data;
+//          for(var i=0; i < results.length; i++){
+//             if (results[i].rating == "r" || results[i].rating == "pg-13")
+//             {
+//             }
+//             else {
+//               var gifDiv = $('<div class="item">')
+//              var rating = results[i].rating;
+//              var p = $('<p>').text( "Rating: " + rating);
+//              var personImage = $('<img>');
+//              personImage.attr('src', results[i].images.fixed_height.url);
+//              gifDiv.append(p)
+//              gifDiv.append(personImage)
+//              $('#gifsAppearHere').prepend(gifDiv);               
+//             }
+//          }
+        
+//     }); 
+// });
+// // $('#addMonster').on('click', function(){
+// //     var monster = $(#addMonster).val().trim();
+// //     monster.push(addMonster);
+// //     render.Buttons();
+// //     return false;
+// // });
+
+</script>
+</body>
+
+</html>
