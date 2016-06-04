@@ -11,7 +11,7 @@
 $('button').on('click', function(){
     $('.monsterButton').removeClass('active');
     $(this).addClass('active');
-    var p = $(this).data('scare'); // <------------------------- 1. What is this in "this" case? 
+    var p = $(this).data('scare'); 
     var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + p + "&api_key=dc6zaTOxFJmzC&limit=10";
     $.ajax({url: queryURL, method: 'GET'})
      .done(function(response) {
@@ -24,24 +24,50 @@ $('button').on('click', function(){
               var gifDiv = $('<div class="item">')
              var rating = results[i].rating;
              var p = $('<p>').text( "Rating: " + rating);
-             var personImage = $('<img>');
-             personImage.attr('src', results[i].images.fixed_height.url);
+             var monsterImage = $('<img>');
+             monsterImage.attr('src', results[i].images.fixed_height.url);
              gifDiv.append(p)
-             gifDiv.append(personImage)
+             gifDiv.append(monsterImage)
              $('#gifsAppearHere').prepend(gifDiv);               
             }
          }
-    
-
     }); 
+
+// This function handles events where one button is clicked
+    $('#addMonster').on('click', function(){
+        var monsterName = $('#monster-input').val().trim();
+        console.log(monsterName);
+        var monsterArray = [];
+
+        //monster.push(monsterName);
+      function renderButtons(){ 
+        $('#addMonster').on('click', function(){
+        var monsterButton = $('<button>');
+           a.addClass('monstersButtonClass');
+           a.attr('data-scare');
+       $('#buttonsAppearHere').append(a);
+       
+       });
+     renderButtons();
+     }
+        
+        return false;
+    })
+
+     
+        
+    //     $('#buttonsAppearHere').empty();
+        
+    //     for (var i = 0; i < results.length; i++){
+    //         var a = $('<button>') // This code $('<button>') is all jQuery needs to create the beginning and end tag. (<button></button>)
+    //         a.addClass('monsters'); // Added a class 
+    //         a.attr('data-scare', monsters[i]); // Added a data-attribute
+    //         a.text(results[i]); // Provided the initial button text
+    //         $('#buttonsAppearHere').append(a); // Added the button to the HTML
+    //     }
+    // }
+
+    // renderButtons();
+    
+    
 });
-
-
-
-//document.getElementById("#reset").reset();
-// $('#addMonster').on('click', function(){
-//     var monster = $(#addMonster).val().trim();
-//     monster.push(addMonster);
-//     render.Buttons();
-//     return false;
-// });
